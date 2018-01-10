@@ -4,13 +4,17 @@
 	<title>SoundCheck</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- CSS -->
+	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	  <!-- Bootstrap -->
+	<!-- Bootstrap CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  	  <!-- JQuery -->
+  	<!-- Bootstrap JS -->
+  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  	<!-- jQuery -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
-  	  <!-- Firebase Reference -->
+	<!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
 </head>
 <body>
@@ -20,32 +24,35 @@
 	   		<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 	  
 			<form class="form-inline my-2 my-lg-0">
-		    	<input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+		    	<input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search for an Artist or Band	" aria-label="Search">
 		     	<button class="btn btn-outline-success my-2 my-sm-0" id="submitButton" type="submit">Search</button>
 		   	</form>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-sm-6">
+		<div class="col-sm-6 col-md-6">
 			<div id="ticketmasterDiv">
 				ticketmaster
 			</div>	
 		</div>
-		<div class="col-sm-6">
-			<div id="picturesDiv">
-				pictures
+		<div class="col-sm-6 col-md-6">
+			<div id="picturesCarousel" class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+			    <!-- Carosel images go here -->
+			  </div>
 			</div>	
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-12 col-md-12">
 			<div id="videosDiv">
 				videos
 			</div>	
 		</div>
 	</div>
-      <!-- Script -->
-    <script src="assets/javascript/javascript.js"></script>
+    <!-- Script -->
+    <!-- <script src="assets/javascript/javascript.js"></script> -->
+    <script src="assets/javascript/gettyapi.js"></script>
 </body>
 </html>
