@@ -1,22 +1,12 @@
-// ticketmaster API: Aidan
-
-//Capture the input (band or artist name)
-//Save it in a variable
-//ajax call using ticketmaster api searching input value
-//after return: display the ticket/purchasing information
-
-//var keyword = "Less Than Jake";
-
-// var keyword = "phish";
-// console.log("!!!!!!!Keyword: ", keyword);
 $(document).ready(function () {
 	$("#submitButton").on("click", function() {
+		event.preventDefault();
 
+		var keyword = $("#searchInput").val().trim();
 		var ticketmasterKey = "RR18UORj62Wr84ro7p7UoiXyX9oRffwD";
 		var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&countryCode=US&apikey=";
 
-		keyword = $("#searchInput").val().trim();
-		console.log("KKKKKKKKKeyword: ", keyword);
+		$("#searchInput").val("");
 
 		$.ajax({
 		  type:"GET",
@@ -24,7 +14,7 @@ $(document).ready(function () {
 		  async:true,
 		  dataType: "json",
 		  success: function(json) {
-		            console.log(json);
+		            $("#userData").empty();  
 
 		            var events = json._embedded.events;
 		            console.log("events ", events);
@@ -88,7 +78,7 @@ $(document).ready(function () {
 		  	error: function(xhr, status, err) {
 		              // This time, we do not end up here!
 		    }
-	 	})
+	 	});
 
-	})
-})
+	});
+});
