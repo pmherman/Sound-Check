@@ -27,6 +27,8 @@ $(document).ready(function () {
 						var eventTicketURL = events[i].url;
 						console.log("eventTicketURL: ", eventTicketURL);
 
+			// xxxxxxxxxxxx Add a link to the venue name to take to venue website xxxxxxxxxxxxxxxxx
+
 						var eventVenue = events[i]._embedded.venues[0].name;
 						console.log("++++++eventVenue: ", eventVenue);
 
@@ -41,22 +43,19 @@ $(document).ready(function () {
 
 						var eventDate = events[i].dates.start.localDate;
 
-				// +++++++This format is not working ++++++++
-						var formatDate = moment(eventDate).format("dddd MMM Do YY ")
+						var formatDate = moment(eventDate).format("ddd L")
 						console.log("Formated eventDate: ", formatDate);
 
 						var eventTime = events[i].dates.start.localTime;
-						console.log("Event Time: " + eventTime);
 
-				// +++++++This format is not working ++++++++
-						var convertedEventTime = moment(eventTime).format("HH:MM a");
+						var convertedEventTime = moment(eventTime, "HH:mm A").format("h:mm A");
 						console.log("Converted eventTime: ", convertedEventTime);
 
 		//======================= Dynamic Elements ==========================
 			             var newRow = $("<tr>");
 			  			 var divEvent = $("<td>" + eventName + "</td>");
-			  			 var divLocation = $("<td>" + location + "</td>");
-			  			 var divDate = $("<td><span>" + eventDate + "<br>" + eventTime + "</span></td> ");
+			  			 var divLocation = $("<td><span>" + eventVenue + "<br>" + location + "</span></td>");
+			  			 var divDate = $("<td>" + formatDate + "<br>" + convertedEventTime + "</td> ");
 			  			 var divTickets = $("<td>");
 			  			 var button = $("<a target='_blank'>");
 
