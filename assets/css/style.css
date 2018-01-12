@@ -1,3 +1,8 @@
+/*#tableHeader {
+	position: fixed;
+	background-color: white;
+}
+*/
 #ticketmasterDiv {
 	max-height: 400px;
     overflow: auto;
@@ -8,5 +13,10 @@
 
 .btn {
 	background-color: #2d64a7;
+	color: white;
+}
+
+.btn:hover {
+	background-color: #4286f4;
 	color: white;
 }
