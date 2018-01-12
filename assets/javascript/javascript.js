@@ -7,16 +7,16 @@
 
 //var keyword = "Less Than Jake";
 
-// var keyword = "phish";
+var keyword = "phish";
 // console.log("!!!!!!!Keyword: ", keyword);
 
-$("#submitButton").on("click", function() {
+// $("#submitButton").on("click", function() {
 
 var ticketmasterKey = "RR18UORj62Wr84ro7p7UoiXyX9oRffwD";
 var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&countryCode=US&apikey=";
 
-	keyword = $("#searchInput").val().trim();
-	console.log("KKKKKKKKKeyword: ", keyword);
+	// keyword = $("#searchInput").val().trim();
+	// console.log("KKKKKKKKKeyword: ", keyword);
 
 	$.ajax({
 	  type:"GET",
@@ -50,13 +50,15 @@ var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+
 					console.log("Location: " + location);
 
 					var eventDate = events[i].dates.start.localDate;
+					var formatDate = moment(eventDate).format("dddd MMM Do YY ")
 					console.log("eventDate: ", eventDate);
 
 					var eventTime = events[i].dates.start.localTime;
+					console.log("Event Time: " + eventTime);
 
 			// +++++++This format is not working ++++++++
-					var convertedEventTime = moment("eventTime").format("HH:MM a");
-					console.log("eventTime: ", convertedEventTime);
+					var convertedEventTime = moment(eventTime).format("HH:MM a");
+					console.log("Converted eventTime: ", convertedEventTime);
 
 	//======================= Dynamic Elements ==========================
 			             var newRow = $("<tr>");
@@ -64,10 +66,12 @@ var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+
 			  			 var divLocation = $("<td>" + location + "</td>");
 			  			 var divDate = $("<td><span>" + eventDate + "<br>" + eventTime + "</span></td> ");
 			  			 var divTickets = $("<td>");
-			  			 var button = $("<button>");
+			  			 var button = $("<a target='_blank'>");
 
 			  			 button.text("Tickets");
 			  			 button.addClass("btn")
+			  			 button.attr("href", eventTicketURL);
+			  			 
 			  			 divTickets.append(button);
 
 			  			 newRow.addClass("searchReturn");
@@ -86,4 +90,4 @@ var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+
 	    }
  })
 
-})
+// })
