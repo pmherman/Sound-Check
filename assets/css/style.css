@@ -1,0 +1,12 @@
+#ticketmasterDiv {
+	max-height: 50%;
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.btn {
+	background-color: #2d64a7;
+	color: white;
+}
