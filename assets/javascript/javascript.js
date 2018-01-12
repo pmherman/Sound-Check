@@ -40,8 +40,10 @@ $(document).ready(function () {
 						console.log("Location: " + location);
 
 						var eventDate = events[i].dates.start.localDate;
+
+				// +++++++This format is not working ++++++++
 						var formatDate = moment(eventDate).format("dddd MMM Do YY ")
-						console.log("eventDate: ", eventDate);
+						console.log("Formated eventDate: ", formatDate);
 
 						var eventTime = events[i].dates.start.localTime;
 						console.log("Event Time: " + eventTime);
