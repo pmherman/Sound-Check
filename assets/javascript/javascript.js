@@ -7,15 +7,14 @@
 
 //var keyword = "Less Than Jake";
 
-var keyword = "phish";
-console.log("!!!!!!!Keyword: ", keyword);
+// var keyword = "phish";
+// console.log("!!!!!!!Keyword: ", keyword);
 
+$("#submitButton").on("click", function() {
 
 var ticketmasterKey = "RR18UORj62Wr84ro7p7UoiXyX9oRffwD";
 var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&countryCode=US&apikey=";
 
-
-// $("#submitButton").on("click", function() {
 	keyword = $("#searchInput").val().trim();
 	console.log("KKKKKKKKKeyword: ", keyword);
 
@@ -85,6 +84,6 @@ var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+
 	  	error: function(xhr, status, err) {
 	              // This time, we do not end up here!
 	    }
-	// });
+ })
 
-});
+})
