@@ -12,8 +12,8 @@
 $(document).ready(function () {
 	$("#submitButton").on("click", function() {
 
-	var ticketmasterKey = "RR18UORj62Wr84ro7p7UoiXyX9oRffwD";
-	var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&countryCode=US&apikey=";
+		var ticketmasterKey = "RR18UORj62Wr84ro7p7UoiXyX9oRffwD";
+		var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&countryCode=US&apikey=";
 
 		keyword = $("#searchInput").val().trim();
 		console.log("KKKKKKKKKeyword: ", keyword);
@@ -61,34 +61,34 @@ $(document).ready(function () {
 						console.log("Converted eventTime: ", convertedEventTime);
 
 		//======================= Dynamic Elements ==========================
-				             var newRow = $("<tr>");
-				  			 var divEvent = $("<td>" + eventName + "</td>");
-				  			 var divLocation = $("<td>" + location + "</td>");
-				  			 var divDate = $("<td><span>" + eventDate + "<br>" + eventTime + "</span></td> ");
-				  			 var divTickets = $("<td>");
-				  			 var button = $("<a target='_blank'>");
+			             var newRow = $("<tr>");
+			  			 var divEvent = $("<td>" + eventName + "</td>");
+			  			 var divLocation = $("<td>" + location + "</td>");
+			  			 var divDate = $("<td><span>" + eventDate + "<br>" + eventTime + "</span></td> ");
+			  			 var divTickets = $("<td>");
+			  			 var button = $("<a target='_blank'>");
 
-				  			 button.text("Tickets");
-				  			 button.addClass("btn")
-				  			 button.attr("href", eventTicketURL);
-				  			 
-				  			 divTickets.append(button);
+			  			 button.text("Tickets");
+			  			 button.addClass("btn")
+			  			 button.attr("href", eventTicketURL);
+			  			 
+			  			 divTickets.append(button);
 
-				  			 newRow.addClass("searchReturn");
-				  			 divEvent.addClass("event col-sm-3");
-				  			 divLocation.addClass("event col-sm-3");
-				  			 divDate.addClass("event col-sm-3");
-				  			 divTickets.addClass("event col-sm-3");
+			  			 newRow.addClass("searchReturn");
+			  			 divEvent.addClass("event col-sm-3");
+			  			 divLocation.addClass("event col-sm-3");
+			  			 divDate.addClass("event col-sm-3");
+			  			 divTickets.addClass("event col-sm-3");
 
-				  			 $(newRow).append(divEvent, divLocation, divDate, divTickets);
-				  			 $("#userData").append(newRow);  
-						
-				  		}
+			  			 $(newRow).append(divEvent, divLocation, divDate, divTickets);
+			  			 $("#userData").append(newRow);  
+					
+			  		}
 		    },
 		  	error: function(xhr, status, err) {
 		              // This time, we do not end up here!
 		    }
-	 })
+	 	})
 
 	})
 })
