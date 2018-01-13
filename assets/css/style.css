@@ -4,6 +4,7 @@
 }
 */
 #ticketmasterDiv {
+	display: none;
 	max-height: 400px;
     overflow: auto;
     width: 90%;
@@ -48,5 +49,9 @@ body {
 /*YouTube Results Div*/
 #results {
 	border-top: 2px solid white;
+	margin-top: 15px;
+}
+
+.class {
 	margin-top: 15px;
 }
