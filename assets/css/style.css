@@ -37,6 +37,10 @@ body {
 	background: url("../images/background.jpg");
 }
 
+.jumbotron {
+	opacity: 0.8;
+}
+
 .polaroid img {
 	margin: auto;
 	border: 15px solid #fff;
