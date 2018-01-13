@@ -18,11 +18,8 @@ $(document).ready(function () {
 		  async:true,
 		  dataType: "json",
 		  success: function(json) {
+		  	
 		            $("#userData").empty();  
-
-		            console.log(json);
-		            // console.log(json._embedded.events);
-
 
 		            if (json.page.totalElements == 0) {
 		            	$("#userData").empty();  
