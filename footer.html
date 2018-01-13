@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Join Our Mailing List</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<br><br>
+	<form id="mailingList" class="text-center">
+		<h3 class="text-center">Join our mailing list</h3>
+		<label>Name: </label>
+		<input id="nameInput" type="text" placeholder="Name Goes Here" required="required"><br>
+		<label>Email Address: </label>
+		<input id="emailInput" type="email" placeholder="name@source.com" required="required"><br>
+		<button class="btn" id="submitList" type="submit" value="submit">Submit</button>
+	</form>
+</body>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBBdSmLSWFMDTyQjqcU5POgmZb9GEGqlG4",
+	    authDomain: "project1-4c4f0.firebaseapp.com",
+	    databaseURL: "https://project1-4c4f0.firebaseio.com",
+	    projectId: "project1-4c4f0",
+	    storageBucket: "",
+	    messagingSenderId: "284380347549"
+	  };
+	  firebase.initializeApp(config);
+
+	  var database = firebase.database();
+
+	  var name;
+	  var email;
+
+	  function isValidEmailAddress(emailAddress) {
+    	var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    	return pattern.test(emailAddress);
+}
+
+	  $("#submitList").on("click", function(e) {
+	  	e.preventDefault();
+
+	  	name = $("#nameInput").val().trim()
+	  	email = $("#emailInput").val().trim();
+
+	  	if (name == "") {
+	  		alert("Please enter a valid name!")
+	  	} else if (email == "") {
+	  		alert("please enter a vaild email");
+	  	} else if ( !isValidEmailAddress(email) ) {
+  			alert("PLeaes enter a vaild email address");
+	  	} else {
+		  	alert("Thank you " + name + " for registering for our mailing list");
+		  	
+		  	database.ref().push({
+		  		name: name,
+		  		email: email,
+		  		dateAdded: firebase.database.ServerValue.TIMESTAMP
+		  	});
+	  	}
+	  });
+	</script>
+</html>
