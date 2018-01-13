@@ -1,12 +1,4 @@
-/*#bodyContent {
-	display: none;
-}
-*/
 
-/*This is the element that holds all of the body divs. Default will be hidden until a search is exectuted.*/
-#bodyContent {
-	display: none;
-}
 
 #ticketmasterDiv {
 	max-height: 400px;
