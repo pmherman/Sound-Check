@@ -11,3 +11,13 @@ body {
 		-moz-box-shadow: 3px 3px 3px #777;
 			box-shadow: 3px 3px 3px #777;
 }
+
+.youTubeTitle {
+	color: white;
+	font-weight: bold;
+}
+/*YouTube Results Div*/
+#results {
+	border-top: 2px solid white;
+	margin-top: 15px;
+}
