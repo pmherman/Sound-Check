@@ -1,3 +1,38 @@
+/*#tableHeader {
+	position: fixed;
+	background-color: white;
+}
+*/
+
+/*This is the element that holds all of the body divs. Default will be hidden until a search is exectuted.*/
+#bodyContent {
+	display: none;
+}
+
+#ticketmasterDiv {
+	max-height: 400px;
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+    border: 1px solid white;
+    color: white;
+    background-color: #8BB3E2;
+}
+
+.btn {
+	background-color: #2d64a7;
+	color: white;
+}
+
+.btn:hover {
+	background-color: #4286f4;
+	color: white;
+}
+
+.link {
+	color: white;
+}
+
 body {
 	background: url("../images/background.jpg");
 }
@@ -14,4 +49,18 @@ body {
 	-webkit-box-shadow: 3px 3px 3px #777;
 		-moz-box-shadow: 3px 3px 3px #777;
 			box-shadow: 3px 3px 3px #777;
+}
+
+.youTubeTitle {
+	color: white;
+	font-weight: bold;
+}
+/*YouTube Results Div*/
+#results {
+	border-top: 2px solid white;
+	margin-top: 15px;
+}
+
+.item {
+	margin-top: 15px;
 }

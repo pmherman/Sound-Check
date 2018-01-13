@@ -6,6 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Bootstrap CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	  <!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon1.ico" type="image/x-icon">  
+      <!-- Moment.js -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>		
   	<!-- jQuery -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<!-- Bootstrap JS -->
@@ -24,16 +28,27 @@
 	  		<h1 class="display-2">SoundCheck</h1>
 	   		<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 			<form class="form-inline my-2 my-lg-0">
-		    	<input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search for an Artist or Band" aria-label="Search">
-		     	<button class="btn btn-outline-success my-2 my-sm-0" id="submitButton" type="submit">Search</button>
+		    	<input class="form-control mr-sm-2" id="searchInput" type="text" placeholder="Search for an Artist or Band" aria-label="Search" autocomplete="off">
+		     	<button class="btn btn-outline-success my-2 my-sm-0" id="submitButton" value="Search" type="submit">Search</button>
 		   	</form>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-sm-6 col-md-6">
-			<div id="ticketmasterDiv">
-
+		<div class="col-sm-6">
+			<div id="ticketmasterDiv" class="panel-body">
+			    <table class="table">
+					<thead>
+						<tr id="tableHeader">
+							<th scope="col">Event Name</th>
+							<th scope="col">Location</th>
+							<th scope="col">Date</th>
+							<th scope="col"></th>
+						</tr>				
+					</thead>
+					<tbody id="userData">
+					</tbody>
+			    </table>
 			</div>	
 		</div>
 		<div class="col-sm-6 col-md-6 text-center">
@@ -47,13 +62,14 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12 col-md-12">
-			<div id="videosDiv">
-				videos
+			<div id="results" class="row text-center">
 			</div>	
 		</div>
 	</div>
     <!-- Script -->
+    <script src="assets/javascript/youtubeapi.js"></script>
     <script src="assets/javascript/javascript.js"></script>
     <script src="assets/javascript/cassieapi.js"></script>
+  	<script src="https://apis.google.com/js/client.js?onload=init"></script>    
 </body>
 </html>
