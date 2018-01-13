@@ -19,17 +19,25 @@ $(document).ready(function () {
 		  dataType: "json",
 		  success: function(json) {
 		            $("#userData").empty();  
+
 		            console.log(json);
 		            // console.log(json._embedded.events);
 
 
 		            if (json.page.totalElements == 0) {
+		            	$("#userData").empty();  
 
-		            	console.log("FIRE!!!!!")
-		            	$("#ticketmasterDiv").html("We're Sorry, there are currently no " + keyword + " concerts. Please enjoy the videos and images!");
+		            	var newRow = $("<tr>");
+		            	var eventTD = ("<td>We're Sorry, there are currently no " + keyword + " concerts. Please enjoy the videos and images!</td>");
+		            	var locationTD = ("<td>Nowhere!</td>");
+		            	var dateTD = ("<td>NEVER!</td>");
+
+		            	$(newRow).append(eventTD, locationTD, dateTD);
+				  		$("#userData").append(newRow);  
+						
 
 		            } else if (json.page.totalElements > 0){
-		            	$("#ticketmasterDiv").show()
+		           
 			            var events = json._embedded.events;
 			            console.log("events ", events);
 
