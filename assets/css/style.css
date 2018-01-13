@@ -2,12 +2,20 @@
 	display: none;
 }
 */
+
+/*This is the element that holds all of the body divs. Default will be hidden until a search is exectuted.*/
+#bodyContent {
+	display: none;
+}
+
 #ticketmasterDiv {
 	max-height: 400px;
     overflow: auto;
     width: 90%;
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white;
+    background-color: #8BB3E2;
 }
 
 .btn {
@@ -21,10 +29,15 @@
 }
 
 .link {
-	color: black;
+	color: white;
+}
 
 body {
 	background: url("../images/background.jpg");
+}
+
+.jumbotron {
+	opacity: 0.8;
 }
 
 .polaroid img {
@@ -35,4 +48,35 @@ body {
 	-webkit-box-shadow: 3px 3px 3px #777;
 		-moz-box-shadow: 3px 3px 3px #777;
 			box-shadow: 3px 3px 3px #777;
+}
+
+.youTubeTitle {
+	color: white;
+	font-weight: bold;
+}
+/*YouTube Results Div*/
+#results {
+	border-top: 2px solid white;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.item {
+	margin-top: 15px;
+}
+
+#footer {
+	font-weight: bold;
+	background-color: #8BB3E2;
+	width: 100vw;
+	height: 40px;
+	margin-top: 25px;
+	position: fixed;
+	bottom: 0px;
+}
+
+#footer>a {
+	color: white;
+	font-weight: bold;
+	text-align: center;
 }
