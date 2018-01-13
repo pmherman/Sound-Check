@@ -22,39 +22,21 @@ $(document).ready(function () {
 		            for (var i = 0; i < events.length; i++) {
 		             	
 						var eventName = events[i].name;
-						console.log("eventName: ", eventName);
-
 						var eventTicketURL = events[i].url;
-						console.log("eventTicketURL: ", eventTicketURL);
-
-			// xxxxxxxxxxxx Add a link to the venue name to take to venue website xxxxxxxxxxxxxxxxx
-
 						var eventVenue = events[i]._embedded.venues[0].name;
-						console.log("++++++eventVenue: ", eventVenue);
-
-						var eventCity = events[i]._embedded.venues[0].city.name;
-						console.log("===== eventCity: ", eventCity);
-
-						var eventState = events[i]._embedded.venues[0].state.name;
-						console.log("XXXXX eventState: ", eventState);
-
+						var venueURL = events[i]._embedded.venues[0].url;				
+						var eventCity = events[i]._embedded.venues[0].city.name;				
+						var eventState = events[i]._embedded.venues[0].state.stateCode;
 						var location = eventCity + ", " + eventState;
-						console.log("Location: " + location);
-
 						var eventDate = events[i].dates.start.localDate;
-
 						var formatDate = moment(eventDate).format("ddd L")
-						console.log("Formated eventDate: ", formatDate);
-
 						var eventTime = events[i].dates.start.localTime;
-
 						var convertedEventTime = moment(eventTime, "HH:mm A").format("h:mm A");
-						console.log("Converted eventTime: ", convertedEventTime);
 
 		//======================= Dynamic Elements ==========================
 			             var newRow = $("<tr>");
-			  			 var divEvent = $("<td>" + eventName + "</td>");
-			  			 var divLocation = $("<td><span>" + eventVenue + "<br>" + location + "</span></td>");
+			  			 var divEvent = $("<td><a class='link' href='" + eventTicketURL + "' target='_blank'>" +eventName + "</a></td>");
+			  			 var divLocation = $("<td><a class='link' href='" + venueURL + "' target='_blank'>" + eventVenue + "</a><br>" + location + "</td>");
 			  			 var divDate = $("<td>" + formatDate + "<br>" + convertedEventTime + "</td> ");
 			  			 var divTickets = $("<td>");
 			  			 var button = $("<a target='_blank'>");
