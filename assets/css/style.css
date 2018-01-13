@@ -64,3 +64,19 @@ body {
 .item {
 	margin-top: 15px;
 }
+
+#footer {
+	font-weight: bold;
+	background-color: #8BB3E2;
+	width: 100vw;
+	height: 40px;
+	margin-top: 25px;
+	position: fixed;
+	bottom: 0px;
+}
+
+#footer>a {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
