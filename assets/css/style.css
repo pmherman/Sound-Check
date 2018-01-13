@@ -4,6 +4,7 @@
 }
 */
 #ticketmasterDiv {
+	display: none;
 	max-height: 400px;
     overflow: auto;
     width: 90%;
