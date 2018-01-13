@@ -23,4 +23,17 @@
 
 .link {
 	color: black;
+
+body {
+	background: url("../images/background.jpg");
+}
+
+.polaroid img {
+	margin: auto;
+	border: 15px solid #fff;
+	border-radius: 3px;
+	border-bottom: 45px solid #fff;
+	-webkit-box-shadow: 3px 3px 3px #777;
+		-moz-box-shadow: 3px 3px 3px #777;
+			box-shadow: 3px 3px 3px #777;
 }
