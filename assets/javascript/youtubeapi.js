@@ -15,7 +15,7 @@ $(function youTubeCall() {
             order: "viewCount",
        }); 
       // execute the request
-       
+       console.log("You Clicked Search!");
        request.execute(function(response) {
         console.log("Response: " + response);
           var results = response.result;
