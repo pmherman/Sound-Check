@@ -1,4 +1,15 @@
+body {
+	background: url("../images/background.jpg");
+}
 
+.jumbotron {
+	opacity: 0.8;
+}
+
+#searchInput {
+	width: 80%;
+	margin-left: 5%;
+}
 
 #ticketmasterDiv {
 	max-height: 400px;
@@ -25,14 +36,6 @@
 	color: white;
 }
 
-body {
-	background: url("../images/background.jpg");
-}
-
-.jumbotron {
-	opacity: 0.8;
-}
-
 .polaroid img {
 	margin: auto;
 	margin-bottom: 15px;
@@ -48,6 +51,7 @@ body {
 	color: white;
 	font-weight: bold;
 }
+
 /*YouTube Results Div*/
 #results {
 	border-top: 2px solid white;
@@ -76,7 +80,7 @@ body {
 	text-align: center;
 }
 
-/*CSS For Mailing List*/
+/*+++++ CSS For Mailing List +++++++++*/
 
 #mailingList {
 	border: 2px solid white;
@@ -90,3 +94,43 @@ body {
 #mailingList>input {
 	width: 40%;
 }
+/*+++++++++++++++++++++++++++++++++++*/
+@media screen and (max-width: 475px) {
+	#ticketmasterDiv {
+		font-size: 
+	}
+}
+@media screen and (max-width: 490px) {
+	#submitButton {
+		margin-left: 5%;
+	}
+
+	.display-2 {
+		font-size: 55px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#picturesCarousel{
+		margin-top: 15px;
+	    margin-bottom: 15px;	
+	}
+
+	#ticketmasterDiv {
+		max-height: none;
+	}
+}
+
+/*Trying to use the media query to have images div break under tickets*/
+/*@media screen and (max-width: 1030px) {
+	.col-sm-8 {
+		display: block;
+	}
+}*/
+
+/*If on a mobile device*/
+@media (hover: none) {
+	#ticketmasterDiv {
+		max-height: none;
+	}
+}	
