@@ -1,3 +1,7 @@
+.navSpacing {
+	padding: 10px 0;
+}
+
 body, html {
 	height: 100%;
 }
@@ -10,13 +14,20 @@ body {
 .full-screen {
 	background: white;
 	height: 100%;
-	margin: auto;
 }
 
-.navbar {
+.display-1 {
+	margin-top: 40%;
+}
+
+.navigation {
 	background: white;
-	height: 15%;
 	margin-bottom: 20px;
+}
+
+.navInput {
+	width: 50%;
+	margin-top: 10px;	
 }
 
 h1 {
@@ -34,8 +45,11 @@ h2 {
 }
 
 .display-4 {
+	display: inline;
+	text-align: left;
 	text-shadow: 2px 2px #ccc;
 	font-weight: bold;
+	margin-left: 5px;
 }
 
 table, p, input, #footer, .btn {
@@ -133,6 +147,7 @@ table, p, input, #footer, .btn {
 	margin-top: 25px;
 	position: fixed;
 	bottom: 0px;
+	border-top: 1px solid white;
 }
 
 #footer>a {

@@ -1,13 +1,17 @@
 $("#submitButton").on("click", function(event) {
 	event.preventDefault();
 
-	$("header").removeClass("full-screen");
-	$("header").addClass("navbar");
+	$(".carousel-inner").empty();
+
 	$(".lead").hide();
+
+	$("header").removeClass("full-screen text-center");
+	$("header").addClass("navigation");
+
+	$("input").addClass("navInput");
+
 	$("h1").removeClass("display-1 text-pop-up-top");
 	$("h1").addClass("display-4");
-
-	$(".carousel-inner").empty();
 
 	var input = $("#searchInput").val().trim();
 
