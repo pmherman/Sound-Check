@@ -1,22 +1,41 @@
+.navSpacing {
+	padding: 10px 0;
+}
+
+body, html {
+	height: 100%;
+}
+
 body {
 	background-image: url("../images/background.jpg");
     background-attachment: fixed;
 }
 
-.jumbotron {
+.full-screen {
 	background: white;
+	height: 100%;
 }
 
-.no-padding {
-	padding: 0!important;
+.display-1 {
+	margin-top: 40%;
+}
+
+.navigation {
+	background: white;
+	margin-bottom: 20px;
+}
+
+.navInput {
+	width: 50%;
+	margin-top: 10px;	
 }
 
 h1 {
-	font-size: 80px;
 	font-family: 'Trocchi', serif;
 	display: inline;
 	font-weight: bold;
 	letter-spacing: 5px;
+	line-height: 100%;
 }
 
 h2 {
@@ -25,8 +44,12 @@ h2 {
 	font-family: 'Trocchi', serif;
 }
 
-nav {
-	margin-bottom: 20px;
+.display-4 {
+	display: inline;
+	text-align: left;
+	text-shadow: 2px 2px #ccc;
+	font-weight: bold;
+	margin-left: 5px;
 }
 
 table, p, input, #footer, .btn {
@@ -95,7 +118,6 @@ table, p, input, #footer, .btn {
 	position: absolute;
 	text-align: center;
 	width: 100%;
-	text-overflow: ellipsis;
 	color: black;
 	top: 0;
 }
@@ -125,6 +147,7 @@ table, p, input, #footer, .btn {
 	margin-top: 25px;
 	position: fixed;
 	bottom: 0px;
+	border-top: 1px solid white;
 }
 
 #footer>a {
@@ -141,7 +164,6 @@ table, p, input, #footer, .btn {
 	width: 50%;
 	padding: 10px;
 	margin: auto;
-
 }
 
 #mailingList>input {

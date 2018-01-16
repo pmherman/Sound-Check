@@ -3,8 +3,17 @@ $("#submitButton").on("click", function(event) {
 
 	$(".carousel-inner").empty();
 
+	$(".lead").hide();
+
+	$("header").removeClass("full-screen text-center");
+	$("header").addClass("navigation");
+
+	$("input").addClass("navInput");
+
+	$("h1").removeClass("display-1 text-pop-up-top");
+	$("h1").addClass("display-4");
+
 	var input = $("#searchInput").val().trim();
-	console.log(input);
 
 	var apiURL = "https://api.500px.com/v1/photos/search?term=" + input + "&consumer_key=W7RBOrJkDlrlxglMjxP9hvbjth1uqeNrUX84jzBX&exclude_nude=1&only=concert&image_size=3";
 
@@ -13,7 +22,6 @@ $("#submitButton").on("click", function(event) {
 		method: "GET"
 	}).done(function(response) {
 		var results = response.photos;
-		console.log(response.photos);
 
 		for (var i = 0; i < 20; i++) {
 			$(".carousel-inner").append("<div class='carousel-item polaroid'><img class='d-block img-responsive' src='" + results[i].image_url + "' alt= '" + results[i].name + "'</div><div class='carousel-caption d-block'><p>" + results[i].name + "</div></p>");
