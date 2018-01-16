@@ -85,3 +85,9 @@ $(document).ready(function () {
 
 	});
 });
+// Modal JavaScript
+$('#myModal').on('shown.bs.modal', function (e) {
+  e.preventDefault();
+  $('#myInput').focus();
+  $('#myInput').show();
+})
