@@ -22,22 +22,36 @@
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Trocchi" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script scr="assets/javascript/navigation.js"></script>
 </head>
 <body>
 
-<header class="full-screen text-center">
-	<div class="navSpacing">
-		<h1 class="display-1 text-pop-up-top">SoundCheck</h1>
-			
-		<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info.</p>
-		<p class="lead">Then check out what other concertgoers are posting online!</p>
+<!-- <header class="full-screen text-center">
+	<nav id="startPage" class="navbar navbar-light bg-light">
+		<div class="navSpacing">
+			<h1 class="display-1 text-pop-up-top">SoundCheck</h1>
+				
+			<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info.</p>
+			<p class="lead">Then check out what other concertgoers are posting online!</p>
 
-		<form class="form-inline">
-			<input class="form-control" id="searchInput" type="text" placeholder="Search for an Artist or Band" autocomplete="off">
-			<button class="btn" id="submitButton" value="Search" type="submit">Search</button>
-		</form>
-	</div>
-</header>
+			<form class="form-inline" id="startForm">
+				<input class="form-control" id="searchInput" type="text" placeholder="Search for an Artist or Band" autocomplete="off">
+				<button class="btn" id="submitButton" value="Search" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+</header> -->
+
+<div id="navHeader">	
+	<nav id="smNavBar" class="navbar navbar-light bg-light justify-content-between">
+	  <a id="smNavLogo" class="navbar-brand display-4">SoundCheck</a>
+
+	  <form class="form-inline">
+	    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search for an Artist or Band" autocomplete="off" aria-label="Search">
+	    <button id="submitButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Let's Rock!</button>
+	  </form>
+	</nav>
+</div>
 
 <div id="bodyContent">
 	<div class="row">
@@ -104,8 +118,9 @@
 </div>
 
     <!-- Scripts -->
+<!-- 	<script scr="assets/javascript/navigation.js"></script>
 	<script src="assets/javascript/youtubeapi.js"></script>
-    <script src="assets/javascript/javascript.js"></script>
+    <script src="assets/javascript/javascript.js"></script> -->
     <script src="assets/javascript/cassieapi.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=init"></script>
 	

@@ -28,15 +28,24 @@ body {
 
 .navInput {
 	width: 50%;
-	margin-top: 10px;	
 }
 
-h1 {
+h1, #smNavLogo {
 	font-family: 'Trocchi', serif;
 	display: inline;
 	font-weight: bold;
 	letter-spacing: 5px;
 	line-height: 100%;
+}
+
+#smNavLogo {
+	font-size: 4vw;
+}
+
+#navHeader {
+	margin-bottom: 2em;
+	border-bottom: 2px solid #AAC5E8;
+
 }
 
 h2 {
