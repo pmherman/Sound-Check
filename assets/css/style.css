@@ -23,6 +23,7 @@ body {
 .navigation {
 	background: white;
 	margin-bottom: 20px;
+	width: 100vh;
 }
 
 .navInput {
