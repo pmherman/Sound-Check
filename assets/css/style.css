@@ -1,22 +1,30 @@
+body, html {
+	height: 100%;
+}
+
 body {
 	background-image: url("../images/background.jpg");
     background-attachment: fixed;
 }
 
-.jumbotron {
+.full-screen {
 	background: white;
+	height: 100%;
+	margin: auto;
 }
 
-.no-padding {
-	padding: 0!important;
+.navbar {
+	background: white;
+	height: 15%;
+	margin-bottom: 20px;
 }
 
 h1 {
-	font-size: 80px;
 	font-family: 'Trocchi', serif;
 	display: inline;
 	font-weight: bold;
 	letter-spacing: 5px;
+	line-height: 100%;
 }
 
 h2 {
@@ -25,8 +33,9 @@ h2 {
 	font-family: 'Trocchi', serif;
 }
 
-nav {
-	margin-bottom: 20px;
+.display-4 {
+	text-shadow: 2px 2px #ccc;
+	font-weight: bold;
 }
 
 table, p, input, #footer, .btn {
@@ -95,7 +104,6 @@ table, p, input, #footer, .btn {
 	position: absolute;
 	text-align: center;
 	width: 100%;
-	text-overflow: ellipsis;
 	color: black;
 	top: 0;
 }
@@ -141,7 +149,6 @@ table, p, input, #footer, .btn {
 	width: 50%;
 	padding: 10px;
 	margin: auto;
-
 }
 
 #mailingList>input {
