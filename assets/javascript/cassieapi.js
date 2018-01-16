@@ -15,8 +15,8 @@ $("#submitButton").on("click", function(event) {
 		var results = response.photos;
 		console.log(response.photos);
 
-		for (var i = 0; i < 10; i++) {
-			$(".carousel-inner").append("<div class='carousel-item polaroid'><img class='d-block animated bounceInRight' src='" + results[i].image_url + "'</div>");
+		for (var i = 0; i < 20; i++) {
+			$(".carousel-inner").append("<div class='carousel-item polaroid'><img class='d-block img-responsive' src='" + results[i].image_url + "' alt= '" + results[i].name + "'</div><div class='carousel-caption d-block'><p>" + results[i].name + "</div></p>");
 			if (i == 0) {
 				$(".carousel-item").addClass("active");
 			}
