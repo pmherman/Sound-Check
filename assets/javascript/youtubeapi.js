@@ -13,8 +13,8 @@ $(function() {
             q: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
-            publishedAfter: "2015-01-01T00:00:00Z"
        }); 
+       console.log("Request: "+ request.q);
        // execute the request
        request.execute(function(response) {
           var results = response.result;
