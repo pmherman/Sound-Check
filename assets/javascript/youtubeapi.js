@@ -4,7 +4,7 @@ function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{
 
 //Uses the HTML form to get user entered information
 $(function() {
-  $("#submitButton").on("click", function(e) {
+  $("#searchForm").on("submit", function(e) {
        e.preventDefault();
        // prepare the request
        var request = gapi.client.youtube.search.list({
