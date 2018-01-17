@@ -3,19 +3,20 @@
 function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
 //Uses the HTML form to get user entered information
-  $("#test").on("submit", function(e) {
+  $("#submitButton").on("click", function(e) {
        e.preventDefault();
        console.log("CLICKED!!!!")
        // prepare the request
+       var searchInput = $("#searchInput");
        var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
+            q: encodeURIComponent($(searchInput).val()).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
             publishedAfter: "2015-01-01T00:00:00Z"
        }); 
-       console.log(request);
+       console.log("User Input: " + searchInput);
        // execute the request
        request.execute(function(response) {
           var results = response.result;
