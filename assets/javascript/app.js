@@ -91,7 +91,7 @@ function aidan() {
 				  			 var button = $("<a target='_blank'>");
 
 				  			 button.text("Tickets");
-				  			 button.addClass("btn")
+				  			 button.addClass("ticketButton btn");
 				  			 button.attr("href", eventTicketURL);
 				  			 
 				  			 divTickets.append(button);

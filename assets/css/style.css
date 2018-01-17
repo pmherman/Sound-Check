@@ -194,9 +194,9 @@ table, p, input, #footer, .btn {
 		max-height: none;
 	}
 
-	.btn {
-		display: none;
-	}
+.ticketButton {
+        display: none;
+    }
 }
 
 /*Trying to use the media query to have images div break under tickets*/
