@@ -151,9 +151,10 @@ function init() {
     });
 }
 $(document).ready(function() {
+	$("#bodyContent").hide();
 	$("#submitButton").on("click", function(event) {
 		event.preventDefault();
-
+		$("#bodyContent").show();
 		cassie();
 		aidan();
 		paul();
