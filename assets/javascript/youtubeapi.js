@@ -3,7 +3,7 @@
 function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
 //Uses the HTML form to get user entered information
-$(function youTubeCall() {
+$(function() {
     $("#submitButton").on("click", function(e) {
        e.preventDefault();
        // prepare the request
@@ -13,21 +13,22 @@ $(function youTubeCall() {
             q: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
+            publishedAfter: "2015-01-01T00:00:00Z"
        }); 
-      // execute the request
-       console.log("You Clicked Search!");
+       // execute the request
        request.execute(function(response) {
-        console.log("Response: " + response);
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            $.get("assets/item.html", function(data) {
+            $.get("tpl/item.html", function(data) {
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
             });
           });
           // resetVideoHeight();
        });
     });
+    
+    // $(window).on("resize", resetVideoHeight);
 });
 
 //Initialize Google YouTube API Authorization
