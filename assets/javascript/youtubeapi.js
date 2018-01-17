@@ -4,18 +4,18 @@ function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{
 
 //Uses the HTML form to get user entered information
 $(function() {
-    $("#submitButton").on("click", function(e) {
+  $("form").on("submit", function(e) {
        e.preventDefault();
        // prepare the request
        var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
             q: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
-            channelTitle: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
+            publishedAfter: "2015-01-01T00:00:00Z"
        }); 
-       console.log("Request: "+ request.q);
+       console.log(request);
        // execute the request
        request.execute(function(response) {
           var results = response.result;
@@ -25,11 +25,11 @@ $(function() {
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
             });
           });
-          // resetVideoHeight();
+          resetVideoHeight();
        });
     });
     
-    // $(window).on("resize", resetVideoHeight);
+    $(window).on("resize", resetVideoHeight);
 });
 
 //Initialize Google YouTube API Authorization
