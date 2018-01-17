@@ -23,19 +23,34 @@ body {
 .navigation {
 	background: white;
 	margin-bottom: 20px;
+	width: 100vh;
 }
 
 .navInput {
 	width: 50%;
-	margin-top: 10px;	
 }
 
-h1 {
+h1, #smNavLogo, .modal-title {
 	font-family: 'Trocchi', serif;
 	display: inline;
 	font-weight: bold;
 	letter-spacing: 5px;
 	line-height: 100%;
+}
+
+#smNavLogo {
+	font-size: 4vw;
+}
+
+.modal-title {
+	font-size: 20px;
+	color: black;
+}
+
+#navHeader {
+	margin-bottom: 2em;
+	border-bottom: 2px solid #AAC5E8;
+
 }
 
 h2 {
@@ -69,8 +84,8 @@ table, p, input, #footer, .btn {
 @-webkit-keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}@keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
 
 #searchInput {
-	width: 80%;
-	margin-left: 5%;
+	width: 50%;
+	margin-left: 5px;
 }
 
 #ticketmasterDiv {
@@ -98,11 +113,6 @@ table, p, input, #footer, .btn {
 	color: white;
 }
 
-.polaroid {
-  position: relative;
-  width: 280px;
-}
-
 .polaroid img {
 	margin: auto;
 	margin-bottom: 15px;
@@ -112,14 +122,6 @@ table, p, input, #footer, .btn {
 	-webkit-box-shadow: 3px 3px 3px #777;
 		-moz-box-shadow: 3px 3px 3px #777;
 			box-shadow: 3px 3px 3px #777;
-}
-
-.polaroid p {
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	color: black;
-	top: 0;
 }
 
 .youTubeTitle {

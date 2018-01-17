@@ -11,6 +11,7 @@
 	<!-- Moment.js -->
   	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>		
   	<!-- jQuery -->
+   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 	
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<!-- Bootstrap JS -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -21,26 +22,40 @@
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Trocchi" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script scr="assets/javascript/navigation.js"></script>
 </head>
 <body>
 
-<header class="full-screen text-center">
-	<div class="navSpacing">
-		<h1 class="display-1 text-pop-up-top">SoundCheck</h1>
-			
-		<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info.</p>
-		<p class="lead">Then check out what other concertgoers are posting online!</p>
+<!-- <header class="full-screen text-center">
+	<nav id="startPage" class="navbar navbar-light bg-light">
+		<div class="navSpacing">
+			<h1 class="display-1 text-pop-up-top">SoundCheck</h1>
+				
+			<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info.</p>
+			<p class="lead">Then check out what other concertgoers are posting online!</p>
 
-		<form class="form-inline">
-			<input class="form-control" id="searchInput" type="text" placeholder="Search for an Artist or Band" autocomplete="off">
-			<button class="btn" id="submitButton" value="Search" type="submit">Search</button>
-		</form>
-	</div>
-</header>
+			<form class="form-inline" id="startForm">
+				<input class="form-control" id="searchInput" type="text" placeholder="Search for an Artist or Band" autocomplete="off">
+				<button class="btn" id="submitButton" value="Search" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+</header> -->
+
+<div id="navHeader">	
+	<nav id="smNavBar" class="navbar navbar-light bg-light justify-content-between">
+	  <a id="smNavLogo" class="navbar-brand display-4">SoundCheck</a>
+
+	  <form class="form-inline">
+	    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search for an Artist or Band" autocomplete="off" aria-label="Search">
+	    <button id="submitButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Let's Rock!</button>
+	  </form>
+	</nav>
+</div>
 
 <div id="bodyContent">
 	<div class="row">
-		<div class="col-sm-8">
+		<div class="col-md-12 col-lg-8">
 			<div id="ticketmasterDiv" class="panel-body">
 			    <table class="table">
 					<thead>
@@ -56,7 +71,7 @@
 			    </table>
 			</div>	
 		</div>
-		<div class="col-sm-4 picturesDiv">
+		<div class="col-md-12 col-lg-4 picturesDiv text-center">
 			<div id="picturesCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
 			  <div class="carousel-inner">
 			    <!-- Carosel images will go here -->
@@ -72,13 +87,98 @@
 	</div>
 </div>
 
-<div id="footer" class="text-center" >
-	<a href="footer.html" target="_blank">Click here to join our mailing list for more concert info!</a>
+<!-- Modal for Mailing List Survey -->
+<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">Join our Mailing List</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<form id="surveyForm">
+				<label>Name: </label>
+				<input id="nameInput" type="text" placeholder="Name Goes Here" required="required"><br>
+				<label>Email Address: </label>
+				<input id="emailInput" type="email" placeholder="name@source.com" required="required"><br><br>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button class="btn" id="submitList" type="submit" value="submit">Submit</button>
+			</form>
+      </div>
+
+    </div>
+  </div>
 </div>
 
+<div id="footer" class="text-center" >
+	<!-- Button trigger modal -->
+	<button type="button" class="survey" data-toggle="modal" data-target="#surveyModal">
+	  Join Our Mailing List
+	</button>
+</div>
+<!-- If name isn't valid this modal will execute -->
+<div class="modal fade" id="invalidName">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Error:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Please enter a valid Name.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- If email isn't valid, this modal will execute -->
+<div class="modal fade" id="invalidEmail">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Error:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Please enter a valid email address.</p>
+        <p>Example: name@domain.com</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Success!:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="successModalBody" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>			
+
     <!-- Scripts -->
-	<script src="assets/javascript/youtubeapi.js"></script>
-    <script src="assets/javascript/javascript.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
     <script src="assets/javascript/cassieapi.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=init"></script>
 	
