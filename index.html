@@ -26,28 +26,12 @@
 </head>
 <body>
 
-<!-- <header class="full-screen text-center">
-	<nav id="startPage" class="navbar navbar-light bg-light">
-		<div class="navSpacing">
-			<h1 class="display-1 text-pop-up-top">SoundCheck</h1>
-				
-			<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info.</p>
-			<p class="lead">Then check out what other concertgoers are posting online!</p>
-
-			<form class="form-inline" id="startForm">
-				<input class="form-control" id="searchInput" type="text" placeholder="Search for an Artist or Band" autocomplete="off">
-				<button class="btn" id="submitButton" value="Search" type="submit">Search</button>
-			</form>
-		</div>
-	</nav>
-</header> -->
-
 <div id="navHeader">	
 	<nav id="smNavBar" class="navbar navbar-light bg-light justify-content-between">
-	  <a id="smNavLogo" class="navbar-brand display-4">SoundCheck</a>
+	  <a id="smNavLogo" class="navbar-brand display-4 text-focus-in text-center">SoundCheck</a>
 
 	  <form class="form-inline">
-	    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search for an Artist or Band" autocomplete="off" aria-label="Search">
+	    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search Artist or Band" autocomplete="off" aria-label="Search">
 	    <button id="submitButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Let's Rock!</button>
 	  </form>
 	</nav>
@@ -103,8 +87,8 @@
 				<input id="nameInput" type="text" placeholder="Name Goes Here" required="required"><br>
 				<label>Email Address: </label>
 				<input id="emailInput" type="email" placeholder="name@source.com" required="required"><br><br>
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button class="btn" id="submitList" type="submit" value="submit">Submit</button>
+				<button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
+				<button class="btn surveySubmit" id="submitList" type="submit" value="submit">Submit</button>
 			</form>
       </div>
 
@@ -132,7 +116,7 @@
         <p>Please enter a valid Name.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -152,7 +136,7 @@
         <p>Example: name@domain.com</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -162,7 +146,7 @@
   <div class="modal-dialog" role="dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Success!:</h5>
+        <h5 class="modal-title" style="color: #89ff9d">Success!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -171,7 +155,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -179,7 +163,7 @@
 
     <!-- Scripts -->
     <script src="assets/javascript/firebase.js"></script>
-    <script src="assets/javascript/cassieapi.js"></script>
+    <script src="assets/javascript/app.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=init"></script>
 	
 </body>
