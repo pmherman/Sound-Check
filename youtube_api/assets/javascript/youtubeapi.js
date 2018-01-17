@@ -7,11 +7,12 @@ $(function() {
        var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
+            q: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
             maxResults: 3,
             order: "viewCount",
             publishedAfter: "2015-01-01T00:00:00Z"
        }); 
+       console.log(request);
        // execute the request
        request.execute(function(response) {
           var results = response.result;
