@@ -23,8 +23,8 @@ function cassie() {
 	}).done(function(response) {
 		var results = response.photos;
 
-		for (var i = 0; i < 20; i++) {
-			$(".carousel-inner").append("<div class='carousel-item polaroid'><img class='d-block img-responsive' src='" + results[i].image_url + "' alt= '" + results[i].name + "'</div><div class='carousel-caption d-block'><p>" + results[i].name + "</div></p>");
+		for (var i = 0; i < 10; i++) {
+			$(".carousel-inner").append("<div class='carousel-item polaroid'><img class='d-block' src='" + results[i].image_url + "' alt= '" + results[i].name + "'>");
 			if (i == 0) {
 				$(".carousel-item").addClass("active");
 			}

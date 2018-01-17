@@ -30,10 +30,7 @@ body {
 	width: 50%;
 }
 
-h1 {
-	font-size: 12vw;
-}
-h1, #smNavLogo {
+h1, #smNavLogo, .modal-title {
 	font-family: 'Trocchi', serif;
 	display: inline;
 	font-weight: bold;
@@ -43,6 +40,11 @@ h1, #smNavLogo {
 
 #smNavLogo {
 	font-size: 4vw;
+}
+
+.modal-title {
+	font-size: 20px;
+	color: black;
 }
 
 #navHeader {
@@ -111,11 +113,6 @@ table, p, input, #footer, .btn {
 	color: white;
 }
 
-.polaroid {
-  position: relative;
-  width: 280px;
-}
-
 .polaroid img {
 	margin: auto;
 	margin-bottom: 15px;
@@ -125,14 +122,6 @@ table, p, input, #footer, .btn {
 	-webkit-box-shadow: 3px 3px 3px #777;
 		-moz-box-shadow: 3px 3px 3px #777;
 			box-shadow: 3px 3px 3px #777;
-}
-
-.polaroid p {
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	color: black;
-	top: 0;
 }
 
 .youTubeTitle {
