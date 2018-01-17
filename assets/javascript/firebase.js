@@ -33,7 +33,7 @@
   	} else if ( !isValidEmailAddress(email) ) {
 			$("#invalidEmail").modal('show');
   	} else {
-	  	$("<p>").html("Thank you " + name + " for joining our mailing list").appendTo("#successModalBody");
+	  	$("<p id='thankYou'>").html("Thank you, " + name + ", for joining our mailing list!").appendTo("#successModalBody");
 	  	$("#successModal").modal("show");
 	  	$("#nameInput").val("");
 	  	$("#emailInput").val("");

@@ -211,3 +211,30 @@ table, p, input, #footer, .btn {
 		max-height: none;
 	}
 }	
+
+/*Modal*/
+
+.survey {
+	background-color: #93B3DE;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+
+.modal-content {
+	background-color: #93B3DE;
+	color: white;
+}
+
+.modal-close {
+	background-color: #e2685d;
+	border: none;
+}
+
+.surveySubmit {
+	background-color: #69c679;
+}
+
+#nameInput, #thankYou {
+	text-transform: capitalize;
+}
