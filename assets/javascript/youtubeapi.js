@@ -25,11 +25,11 @@ $(function() {
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
             });
           });
-          resetVideoHeight();
+          // resetVideoHeight();
        });
     });
     
-    $(window).on("resize", resetVideoHeight);
+    // $(window).on("resize", resetVideoHeight);
 });
 
 //Initialize Google YouTube API Authorization
