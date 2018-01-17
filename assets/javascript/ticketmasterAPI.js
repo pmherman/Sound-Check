@@ -69,7 +69,7 @@ $(document).ready(function () {
 				  			 var button = $("<a target='_blank'>");
 
 				  			 button.text("Tickets");
-				  			 button.addClass("btn")
+				  			 button.addClass("btn");
 				  			 button.attr("href", eventTicketURL);
 				  			 
 				  			 divTickets.append(button);
