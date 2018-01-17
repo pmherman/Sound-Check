@@ -130,7 +130,7 @@ function paul() {
       // execute the request
        console.log("You Clicked Search!");
        request.execute(function(response) {
-        console.log("Response: " + response);
+        console.log("Response: " + response.q);
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
