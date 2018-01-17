@@ -11,6 +11,7 @@ $(function() {
             part: "snippet",
             type: "video",
             q: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
+            channelTitle: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
        }); 
