@@ -1,7 +1,3 @@
-.navSpacing {
-	padding: 10px 0;
-}
-
 body, html {
 	height: 100%;
 }
@@ -9,6 +5,10 @@ body, html {
 body {
 	background-image: url("../images/background.jpg");
     background-attachment: fixed;
+}
+
+.navSpacing {
+	padding: 10px 0;
 }
 
 .full-screen {
@@ -24,6 +24,18 @@ body {
 
 .navInput {
 	width: 50%;
+}
+
+#instructions {
+	/*font-family: 'Trocchi', serif;*/
+	background-color: white;
+    width: 82vw;
+    font-size: 1.25em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #2d64a7;
 }
 
 h1, #smNavLogo, .modal-title {
