@@ -1,7 +1,15 @@
+// Navigation Header Switch
+
+$("#submitButton").on("click", function(e) {
+	e.preventDefault();
+	$("#startPage").hide();
+
+})
+
 $(document).ready(function () {
 	$("#bodyContent").hide();
 
-	$("#submitButton").on("click", function() {
+	$("#submitButton").on("click", function(event) {
 		event.preventDefault();
 
 		$("#bodyContent").show();
@@ -85,3 +93,9 @@ $(document).ready(function () {
 
 	});
 });
+// Modal JavaScript
+$('#myModal').on('shown.bs.modal', function (e) {
+  e.preventDefault();
+  $('#myInput').focus();
+  $('#myInput').show();
+})

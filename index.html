@@ -11,6 +11,7 @@
 	<!-- Moment.js -->
   	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>		
   	<!-- jQuery -->
+   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 	
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<!-- Bootstrap JS -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -21,64 +22,108 @@
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Trocchi" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script scr="assets/javascript/navigation.js"></script>
 </head>
 <body>
 
-<div class="jumbotron jumbotron-fluid text-center">
-	<h1 class="text-pop-up-top">SoundCheck</h1>
-		
-	<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info</p>
-	<p class="lead">Then check out what other concertgoers are posting online!</p>
+<!-- <header class="full-screen text-center">
+	<nav id="startPage" class="navbar navbar-light bg-light">
+		<div class="navSpacing">
+			<h1 class="display-1 text-pop-up-top">SoundCheck</h1>
+				
+			<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info.</p>
+			<p class="lead">Then check out what other concertgoers are posting online!</p>
 
-	<form class="form-inline my-2 my-lg-0">
-		<input class="form-control mr-sm-2" id="searchInput" type="text" placeholder="Search for an Artist or Band" aria-label="Search" autocomplete="off">
-		<button class="btn my-2 my-sm-0" id="submitButton" value="Search" type="submit">Search</button>
-	</form>
+			<form class="form-inline" id="startForm">
+				<input class="form-control" id="searchInput" type="text" placeholder="Search for an Artist or Band" autocomplete="off">
+				<button class="btn" id="submitButton" value="Search" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+</header> -->
+
+<div id="navHeader">	
+	<nav id="smNavBar" class="navbar navbar-light bg-light justify-content-between">
+	  <a id="smNavLogo" class="navbar-brand display-4">SoundCheck</a>
+
+	  <form class="form-inline">
+	    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search for an Artist or Band" autocomplete="off" aria-label="Search">
+	    <button id="submitButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Let's Rock!</button>
+	  </form>
+	</nav>
 </div>
 
-	<div id="bodyContent">
-		<div class="row">
-			<div class="col-sm-8">
-				<div id="ticketmasterDiv" class="panel-body">
-				    <table class="table">
-						<thead>
-							<tr id="tableHeader">
-								<th scope="col">Event Name</th>
-								<th scope="col">Location</th>
-								<th scope="col">Date</th>
-								<th scope="col"></th>
-							</tr>				
-						</thead>
-						<tbody id="userData">
-						</tbody>
-				    </table>
-				</div>	
-			</div>
-			<div class="col-sm-4 picturesDiv">
-				<div id="picturesCarousel" class="carousel slide" data-ride="carousel" data-interval="7000">
-				  <div class="carousel-inner">
-				    <!-- Carosel images will go here -->
-				  </div>
-				</div>
-			</div>
+<div id="bodyContent">
+	<div class="row">
+		<div class="col-md-12 col-lg-8">
+			<div id="ticketmasterDiv" class="panel-body">
+			    <table class="table">
+					<thead>
+						<tr id="tableHeader">
+							<th scope="col">Event Name</th>
+							<th scope="col">Location</th>
+							<th scope="col">Date</th>
+							<th scope="col"></th>
+						</tr>				
+					</thead>
+					<tbody id="userData">
+					</tbody>
+			    </table>
+			</div>	
 		</div>
-		<div class="row">
-<!-- 	Have question about class here -->
-			<div class="col-sm-12 col-md-12">
-				<div id="results" class="row text-center">
-				</div>	
+		<div class="col-md-12 col-lg-4 picturesDiv text-center">
+			<div id="picturesCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+			  <div class="carousel-inner">
+			    <!-- Carosel images will go here -->
+			  </div>
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div id="results" class="row text-center">
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="footer" class="text-center" >
 	<a href="footer.html" target="_blank">Click here to join our mailing list for more concert info!</a>
 </div>
 
     <!-- Scripts -->
+<!-- 	<script scr="assets/javascript/navigation.js"></script>
 	<script src="assets/javascript/youtubeapi.js"></script>
     <script src="assets/javascript/ticketmasterAPI.js"></script>
+    <script src="assets/javascript/javascript.js"></script> -->
     <script src="assets/javascript/cassieapi.js"></script>
-	<script src="https://apis.google.com/js/client.js?onload=init"></script>    
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
+	
 </body>
 </html>

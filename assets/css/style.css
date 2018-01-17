@@ -1,22 +1,54 @@
+.navSpacing {
+	padding: 10px 0;
+}
+
+body, html {
+	height: 100%;
+}
+
 body {
 	background-image: url("../images/background.jpg");
     background-attachment: fixed;
 }
 
-.jumbotron {
+.full-screen {
 	background: white;
+	height: 100%;
 }
 
-.no-padding {
-	padding: 0!important;
+.display-1 {
+	margin-top: 40%;
+}
+
+.navigation {
+	background: white;
+	margin-bottom: 20px;
+	width: 100vh;
+}
+
+.navInput {
+	width: 50%;
 }
 
 h1 {
 	font-size: 12vw;
+}
+h1, #smNavLogo {
 	font-family: 'Trocchi', serif;
 	display: inline;
 	font-weight: bold;
 	letter-spacing: 5px;
+	line-height: 100%;
+}
+
+#smNavLogo {
+	font-size: 4vw;
+}
+
+#navHeader {
+	margin-bottom: 2em;
+	border-bottom: 2px solid #AAC5E8;
+
 }
 
 h2 {
@@ -25,8 +57,12 @@ h2 {
 	font-family: 'Trocchi', serif;
 }
 
-nav {
-	margin-bottom: 20px;
+.display-4 {
+	display: inline;
+	text-align: left;
+	text-shadow: 2px 2px #ccc;
+	font-weight: bold;
+	margin-left: 5px;
 }
 
 table, p, input, #footer, .btn {
@@ -46,8 +82,8 @@ table, p, input, #footer, .btn {
 @-webkit-keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}@keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
 
 #searchInput {
-	width: 80%;
-	margin-left: 5%;
+	width: 50%;
+	margin-left: 5px;
 }
 
 #ticketmasterDiv {
@@ -95,7 +131,6 @@ table, p, input, #footer, .btn {
 	position: absolute;
 	text-align: center;
 	width: 100%;
-	text-overflow: ellipsis;
 	color: black;
 	top: 0;
 }
@@ -125,6 +160,7 @@ table, p, input, #footer, .btn {
 	margin-top: 25px;
 	position: fixed;
 	bottom: 0px;
+	border-top: 1px solid white;
 }
 
 #footer>a {
@@ -141,7 +177,6 @@ table, p, input, #footer, .btn {
 	width: 50%;
 	padding: 10px;
 	margin: auto;
-
 }
 
 #mailingList>input {
