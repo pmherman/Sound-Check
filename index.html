@@ -3,7 +3,7 @@
 <head lang="en-us">
 	<title>SoundCheck</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, shrink-to-fit=no">
 	<!-- Bootstrap CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	  <!-- Favicon -->
@@ -103,8 +103,8 @@
 				<input id="nameInput" type="text" placeholder="Name Goes Here" required="required"><br>
 				<label>Email Address: </label>
 				<input id="emailInput" type="email" placeholder="name@source.com" required="required"><br><br>
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button class="btn" id="submitList" type="submit" value="submit">Submit</button>
+				<button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
+				<button class="btn surveySubmit" id="submitList" type="submit" value="submit">Submit</button>
 			</form>
       </div>
 
@@ -132,7 +132,7 @@
         <p>Please enter a valid Name.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -152,7 +152,7 @@
         <p>Example: name@domain.com</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -162,7 +162,7 @@
   <div class="modal-dialog" role="dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Success!:</h5>
+        <h5 class="modal-title" style="color: #89ff9d">Success!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -171,7 +171,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -179,7 +179,7 @@
 
     <!-- Scripts -->
     <script src="assets/javascript/firebase.js"></script>
-    <script src="assets/javascript/cassieapi.js"></script>
+    <script src="assets/javascript/app.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=init"></script>
 	
 </body>

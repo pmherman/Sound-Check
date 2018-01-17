@@ -172,18 +172,15 @@ table, p, input, #footer, .btn {
 	width: 40%;
 }
 /*+++++++++++++++++++++++++++++++++++*/
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 375px) {
 	#ticketmasterDiv {
-		font-size: 
+		font-size: 14px;
 	}
 }
+
 @media screen and (max-width: 490px) {
 	#submitButton {
 		margin-left: 5%;
-	}
-
-	.display-2 {
-		font-size: 55px;
 	}
 }
 
@@ -195,6 +192,10 @@ table, p, input, #footer, .btn {
 
 	#ticketmasterDiv {
 		max-height: none;
+	}
+
+	.btn {
+		display: none;
 	}
 }
 
@@ -211,3 +212,30 @@ table, p, input, #footer, .btn {
 		max-height: none;
 	}
 }	
+
+/*Modal*/
+
+.survey {
+	background-color: #93B3DE;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+
+.modal-content {
+	background-color: #93B3DE;
+	color: white;
+}
+
+.modal-close {
+	background-color: #e2685d;
+	border: none;
+}
+
+.surveySubmit {
+	background-color: #69c679;
+}
+
+#nameInput, #thankYou {
+	text-transform: capitalize;
+}
