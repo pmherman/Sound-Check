@@ -3,7 +3,7 @@
 function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
 //Uses the HTML form to get user entered information
-  $("#form").on("submit", function(e) {
+  $("#test").on("submit", function(e) {
        e.preventDefault();
        console.log("CLICKED!!!!")
        // prepare the request
