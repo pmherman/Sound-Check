@@ -150,11 +150,13 @@ function init() {
         // yt api is ready
     });
 }
+
 $(document).ready(function() {
 	$("#submitButton").on("click", function(event) {
 		event.preventDefault();
+		$("#instructions").hide();
 
-		cassie();
+		cassie(); 
 		aidan();
 		paul();
 
