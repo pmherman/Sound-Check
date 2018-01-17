@@ -87,40 +87,98 @@
 	</div>
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal for Mailing List Survey -->
+<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <p class="modal-title">Join our Mailing List</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+			<form id="surveyForm">
+				<label>Name: </label>
+				<input id="nameInput" type="text" placeholder="Name Goes Here" required="required"><br>
+				<label>Email Address: </label>
+				<input id="emailInput" type="email" placeholder="name@source.com" required="required"><br><br>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button class="btn" id="submitList" type="submit" value="submit">Submit</button>
+			</form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+
     </div>
   </div>
 </div>
 
 <div id="footer" class="text-center" >
-	<a href="footer.html" target="_blank">Click here to join our mailing list for more concert info!</a>
+	<!-- Button trigger modal -->
+	<button type="button" class="survey" data-toggle="modal" data-target="#surveyModal">
+	  Join Our Mailing List
+	</button>
 </div>
+<!-- If name isn't valid this modal will execute -->
+<div class="modal fade" id="invalidName">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Error:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Please enter a valid Name.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- If email isn't valid, this modal will execute -->
+<div class="modal fade" id="invalidEmail">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Error:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Please enter a valid email address.</p>
+        <p>Example: name@domain.com</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal">
+  <div class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Success!:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="successModalBody" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>			
 
     <!-- Scripts -->
-<!-- 	<script scr="assets/javascript/navigation.js"></script>
-	<script src="assets/javascript/youtubeapi.js"></script>
-    <script src="assets/javascript/javascript.js"></script> -->
+    <script src="assets/javascript/firebase.js"></script>
     <script src="assets/javascript/cassieapi.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=init"></script>
 	
