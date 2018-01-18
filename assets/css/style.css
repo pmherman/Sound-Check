@@ -159,6 +159,7 @@ table, p, input, #footer, .btn {
 .youTubeTitle {
 	color: white;
 	font-weight: bold;
+	text-shadow: -1px 0 #003996, 0 1px #003996, 1px 0 #003996, 0 -1px ;
 }
 
 /*YouTube Results Div*/
