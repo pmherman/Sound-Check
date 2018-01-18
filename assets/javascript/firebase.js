@@ -29,9 +29,10 @@
   	if (name == "") {
   		$("#invalidName").modal('show');
   	} else if (email == "") {
-  		$("#invalidEmail").modal('show');
+  		$("<p>").html("You must enter an email address. This line cannot be blank.").appendTo("#messageEmail")
+      $("#invalidEmail").modal('show');
   	} else if ( !isValidEmailAddress(email) ) {
-			$("<p>").html("<p>Please enter a valid email address." + email + "is not a valid form of email. Please try again!</p>").appendTo("messageEmail");
+			$("<p>").html("Please enter a valid email address." + email + " is not a valid form of email. Please try again!").appendTo("#messageEmail");
       $("#invalidEmail").modal('show');
   	} else {
 	  	$("<p id='thankYou'>").html("Thank you, " + name + ", for joining our mailing list!").appendTo("#successModalBody");
