@@ -26,7 +26,8 @@ function aidan() {
 
 	var keyword = $("#searchInput").val().trim();
 	var ticketmasterKey = "RR18UORj62Wr84ro7p7UoiXyX9oRffwD";
-	var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&countryCode=US&apikey=";
+	var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&includeSpellcheck=yes&sort=date,asc&countryCode=US&apikey=";
+
 
 	$("#searchInput").val("");
 
