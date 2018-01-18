@@ -257,7 +257,9 @@ table, p, input, #footer, .btn {
 	  font-size: 14px;
 	}
 }
-
+ #smNavLogo {
+        font-size: 39px;
+    }
 
 @media screen and (max-width: 576px) {
 	#picturesCarousel{
