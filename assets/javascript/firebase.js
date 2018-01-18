@@ -20,6 +20,11 @@
 	return pattern.test(emailAddress);
 }
 
+  $(".modal-close").on("click", function(e) {
+    e.preventDefault();
+    $("#messageEmail").empty();
+  })
+
   $("#submitList").on("click", function(e) {
   	e.preventDefault();
 
@@ -29,10 +34,10 @@
   	if (name == "") {
   		$("#invalidName").modal('show');
   	} else if (email == "") {
-  		$("<p>").html("You must enter an email address. This line cannot be blank.").appendTo("#messageEmail")
+      $("<p>").html("You must enter an email address. This line cannot be blank.").appendTo("#messageEmail");
       $("#invalidEmail").modal('show');
   	} else if ( !isValidEmailAddress(email) ) {
-			$("<p>").html("Please enter a valid email address." + email + " is not a valid form of email. Please try again!").appendTo("#messageEmail");
+      $("<p>").html("Please enter a valid email address. " + email + " is not a valid form of email. Please try again!").appendTo("#messageEmail");
       $("#invalidEmail").modal('show');
   	} else {
 	  	$("<p id='thankYou'>").html("Thank you, " + name + ", for joining our mailing list!").appendTo("#successModalBody");
