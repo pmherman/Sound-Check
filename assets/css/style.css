@@ -178,6 +178,10 @@ table, p, input, #footer, .btn {
 	margin-top: 15px;
 }
 
+.video {
+	width: 320px;
+}
+
 #footer {
 	font-weight: bold;
 	background-color: #8BB3E2;
@@ -261,6 +265,14 @@ table, p, input, #footer, .btn {
 
 	#smNavLogo {
 		font-size: 39px;
+	}
+
+	#results {
+		padding: 0px;
+	}
+
+	.video {
+	width: 95%;
 	}
 
 	/*css for placeholder*/
