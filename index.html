@@ -22,38 +22,26 @@
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Trocchi" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script scr="assets/javascript/navigation.js"></script>
+    <script src="assets/javascript/youtubeapi.js"></script>
 </head>
 <body>
 
-<!-- <header class="full-screen text-center">
-	<nav id="startPage" class="navbar navbar-light bg-light">
-		<div class="navSpacing">
-			<h1 class="display-1 text-pop-up-top">SoundCheck</h1>
-				
-			<p class="lead">Use SoundCheck to search your favorite touring artists to get upcoming concert info.</p>
-			<p class="lead">Then check out what other concertgoers are posting online!</p>
+<div id="navHeader" class="text-focus-in">	
+	<nav id="smNavBar" class="navbar navbar-light bg-light text-focus-in justify-content-between">
+	  <a id="smNavLogo" class="navbar-brand display-4 text-focus-in text-center">SoundCheck</a>
 
-			<form class="form-inline" id="startForm">
-				<input class="form-control" id="searchInput" type="text" placeholder="Search for an Artist or Band" autocomplete="off">
-				<button class="btn" id="submitButton" value="Search" type="submit">Search</button>
-			</form>
-		</div>
-	</nav>
-</header> -->
-
-<div id="navHeader">	
-	<nav id="smNavBar" class="navbar navbar-light bg-light justify-content-between">
-	  <a id="smNavLogo" class="navbar-brand display-4">SoundCheck</a>
-
-	  <form class="form-inline">
-	    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search for an Artist or Band" autocomplete="off" aria-label="Search">
-	    <button id="submitButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Let's Rock!</button>
+	  <form id="test" class="form-inline">
+	    <input class="form-control mr-sm-2" id="searchInput" type="text" placeholder="Search Artist or Band" autocomplete="off" aria-label="Search">
+	    <input id="submitButton" class="form-control btn btn-outline-success my-2 my-sm-0" value="Let's Rock!" type="submit">
 	  </form>
 	</nav>
 </div>
 
-<div id="bodyContent">
+<div class="text-focus-in">
+	<p id="instructions">Enter a band or artist to search upcoming concerts, find videos and images!</p>
+</div>
+
+<div id="bodyContent" class="text-focus-in">
 	<div class="row">
 		<div class="col-md-12 col-lg-8">
 			<div id="ticketmasterDiv" class="panel-body">
@@ -76,6 +64,14 @@
 			  <div class="carousel-inner">
 			    <!-- Carosel images will go here -->
 			  </div>
+        <a class="carousel-control-prev" href="#picturesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#picturesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
 			</div>
 		</div>
 	</div>
@@ -107,7 +103,6 @@
 				<button class="btn surveySubmit" id="submitList" type="submit" value="submit">Submit</button>
 			</form>
       </div>
-
     </div>
   </div>
 </div>
@@ -118,6 +113,7 @@
 	  Join Our Mailing List
 	</button>
 </div>
+
 <!-- If name isn't valid this modal will execute -->
 <div class="modal fade" id="invalidName">
   <div class="modal-dialog" role="dialog">
@@ -167,8 +163,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id="successModalBody" class="modal-body">
-        
+      <div id="successModalBody" class="modal-body">       
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
@@ -178,9 +173,11 @@
 </div>			
 
     <!-- Scripts -->
+    <!-- <script src="assets/javascript/youtubeapi.js"></script> -->
     <script src="assets/javascript/firebase.js"></script>
     <script src="assets/javascript/app.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=init"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	
 </body>
 </html>
