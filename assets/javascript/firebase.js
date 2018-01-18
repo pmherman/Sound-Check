@@ -20,6 +20,11 @@
 	return pattern.test(emailAddress);
 }
 
+  $(".modal-close").on("click", function(e) {
+    e.preventDefault();
+    $("#messageEmail").empty();
+  })
+
   $("#submitList").on("click", function(e) {
   	e.preventDefault();
 
@@ -29,11 +34,9 @@
   	if (name == "") {
   		$("#invalidName").modal('show');
   	} else if (email == "") {
-  		$("#messageEmail").empty();
-      $("<p>").html("You must enter an email address. This line cannot be blank.").html("#messageEmail")
+      $("<p>").html("You must enter an email address. This line cannot be blank.").html("#messageEmail");
       $("#invalidEmail").modal('show');
   	} else if ( !isValidEmailAddress(email) ) {
-			$("#messageEmail").empty();
       $("<p>").html("Please enter a valid email address. " + email + " is not a valid form of email. Please try again!").html("#messageEmail");
       $("#invalidEmail").modal('show');
   	} else {
