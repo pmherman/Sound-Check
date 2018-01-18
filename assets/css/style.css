@@ -11,6 +11,10 @@ body {
 	width: 50%;
 }
 
+#smNavBar {
+	width: 101.5vw;
+}
+
 #instructions {
 	background-color: white;
     width: 82vw;
