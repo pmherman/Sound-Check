@@ -14,7 +14,7 @@ function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{
             q: encodeURIComponent($(searchInput).val()).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
-            publishedAfter: "2015-01-01T00:00:00Z"
+            videoCategoryId: 10
        }); 
        console.log("User Input: " + searchInput);
        // execute the request
