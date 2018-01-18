@@ -31,7 +31,8 @@
   	} else if (email == "") {
   		$("#invalidEmail").modal('show');
   	} else if ( !isValidEmailAddress(email) ) {
-			$("#invalidEmail").modal('show');
+			$("<p>").html("<p>Please enter a valid email address." + email + "is not a valid form of email. Please try again!</p>").appendTo("messageEmail");
+      $("#invalidEmail").modal('show');
   	} else {
 	  	$("<p id='thankYou'>").html("Thank you, " + name + ", for joining our mailing list!").appendTo("#successModalBody");
 	  	$("#successModal").modal("show");
