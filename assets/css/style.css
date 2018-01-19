@@ -166,6 +166,12 @@ table, p, input, #footer, .btn {
 	text-shadow: -1px 0 #003996, 0 1px #003996, 1px 0 #003996, 0 -1px ;
 }
 
+#poweredByYouTube {
+	color: white;
+	font-weight: bold;
+	text-shadow: -1px 0 #003996, 0 1px #003996, 1px 0 #003996, 0 -1px ;
+}
+
 /*YouTube Results Div*/
 #results {
 	border-top: 2px solid white;
