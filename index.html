@@ -32,6 +32,7 @@
 
 		<form id="test" class="form-inline">
 			<input class="form-control mr-sm-2" id="searchInput" type="text" placeholder="Search Artist or Band" autocomplete="off" aria-label="Search">
+			<input class="form-control mr-sm-2" id="city" type="text" placeholder="City is optional" autocomplete="off" aria-label="Search">
 			<input id="submitButton" class="form-control btn btn-outline-success my-2 my-sm-0" value="Let's Rock!" type="submit">
 		</form>
 	</nav>
@@ -39,7 +40,10 @@
 
 <!-- Initial instructions -->
 <div class="text-focus-in">
-	<p id="instructions">Enter a band or artist to search upcoming concerts, find videos and images!</p>
+	<p id="instructions">Enter a band or artist to search upcoming concerts, find videos and images!
+		<br>Find events within a town or city. 
+		<br>Or see what is up and coming all over, press "Let's Rock!" without any search input!
+	</p>
 </div>
 
 <!-- API results -->
@@ -176,7 +180,7 @@
 
 <!-- Scripts -->
 <script src="assets/javascript/firebase.js"></script>
-<script src="assets/javascript/youtubeapi.js"></script>
+<!-- <script src="assets/javascript/youtubeapi.js"></script> -->
 <script src="assets/javascript/app.js"></script>
 <script src="https://apis.google.com/js/client.js?onload=init"></script>
 	

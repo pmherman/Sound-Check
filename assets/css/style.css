@@ -25,6 +25,10 @@ table, p, input, #footer, .btn {
 	font-family: 'Maven Pro', sans-serif;
 }
 
+input {
+	margin: 2px;
+}
+
 .navInput {
 	width: 50%;
 }
@@ -63,6 +67,7 @@ table, p, input, #footer, .btn {
     margin-right: auto;
     text-align: center;
     padding: 5px;
+   	border-radius: 5px;
     border: 1px solid #2d64a7;
 }
 
@@ -119,10 +124,10 @@ table, p, input, #footer, .btn {
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-#searchInput {
+/*#searchInput {
 	width: 60%;
 	margin-left: 5px;
-}
+}*/
 
 #ticketmasterDiv {
 	max-height: 400px;
@@ -147,6 +152,10 @@ table, p, input, #footer, .btn {
 
 .link {
 	color: white;
+}
+
+.link:hover {
+	cursor: pointer;
 }
 
 .polaroid img {
