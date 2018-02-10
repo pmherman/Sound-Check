@@ -24,10 +24,13 @@ function aidan() {
 	$("#bodyContent").show();
 
 	var keyword = $("#searchInput").val().trim();
+	var city = $("#city").val().trim();
 	var ticketmasterKey = "RR18UORj62Wr84ro7p7UoiXyX9oRffwD";
-	var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&includeSpellcheck=yes&sort=date,asc&countryCode=US&apikey=";
-
+	var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ keyword +"&city="+ city + "&radius=50&unit=miles&includeSpellcheck=yes&sort=date,asc&countryCode=US&apikey=";
+	
+//If they enter a zipcode then add the zipcode to the queryURL,
 	$("#searchInput").val("");
+	$("#city").val("");
 
 	$.ajax({
 	    type:"GET",
