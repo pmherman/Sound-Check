@@ -124,11 +124,6 @@ input {
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-/*#searchInput {
-	width: 60%;
-	margin-left: 5px;
-}*/
-
 #ticketmasterDiv {
 	max-height: 400px;
     overflow: auto;
